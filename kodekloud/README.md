@@ -217,15 +217,15 @@ variable "region" {
 ```
 
 ### 🎯 List Variable
-`hcl
+```hcl
 Copy
 Edit
 variable "prefixes" {
   type    = list(string)
   default = ["Mr", "Mrs", "Sir"]
-}`
+}```
 ### 🎯 Map Variable
-hcl
+```hcl
 Copy
 Edit
 variable "file_content" {
@@ -235,11 +235,10 @@ variable "file_content" {
     statement2 = "Hello from Terraform"
   }
 }
+```
 ### 🎯 Object Variable
-`
-hcl
-Copy
-Edit
+```hcl
+
 variable "bella" {
   type = object({
     name         = string
