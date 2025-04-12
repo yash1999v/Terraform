@@ -168,15 +168,15 @@ You can use different providers in your `main.tf` file. In this case, we will ad
 ##### Code Snippet: Defining the Random Pet Resource
 
 # Using the local provider
-resource "local_file" "example" {
+`resource "local_file" "example" {
   filename = "hello.txt"
   content  = "Hello from Terraform!"
-}
+}`
 
 # Using the random provider
-resource "random_pet" "my_pet" {
+`resource "random_pet" "my_pet" {
   prefix    = "My"
   separator = "-"
-  length    = 2
+  length    = 2`
 }
 
