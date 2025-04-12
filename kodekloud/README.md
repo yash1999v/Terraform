@@ -180,3 +180,79 @@ You can use different providers in your `main.tf` file. In this case, we will ad
   length    = 2`
 }
 
+# 🌱 Terraform Variable Types - Deep Dive
+
+Welcome to this Terraform project that explores different types of variables in Terraform, from basic to complex structures.
+
+## 📌 Overview
+
+This repository is a hands-on guide for understanding how to define and use variables effectively in Terraform. You’ll learn how to use basic types like `string`, `number`, and `bool`, as well as complex types like `list`, `map`, `set`, `object`, and `tuple`.
+
+---
+
+## 📘 Variable Types Covered
+
+### ✅ Basic Types
+- **String** – For alphanumeric values.
+- **Number** – For integers and decimals.
+- **Boolean** – For true/false values.
+
+### 🧩 Complex Types
+- **List** – An ordered collection accessed by index.
+- **Map** – Key-value pairs.
+- **Set** – An unordered collection of unique values.
+- **Object** – A structured collection of fields with defined types.
+- **Tuple** – A sequence of values with fixed length and type order.
+
+---
+
+## 🛠️ Sample Snippets
+
+### 🎯 String Variable
+```hcl
+variable "region" {
+  type    = string
+  default = "us-west-1"
+}
+```
+
+### 🎯 List Variable
+`hcl
+Copy
+Edit
+variable "prefixes" {
+  type    = list(string)
+  default = ["Mr", "Mrs", "Sir"]
+}`
+### 🎯 Map Variable
+hcl
+Copy
+Edit
+variable "file_content" {
+  type = map(string)
+  default = {
+    statement1 = "Welcome"
+    statement2 = "Hello from Terraform"
+  }
+}
+### 🎯 Object Variable
+`
+hcl
+Copy
+Edit
+variable "bella" {
+  type = object({
+    name         = string
+    color        = string
+    age          = number
+    food         = list(string)
+    favorite_pet = bool
+  })
+  default = {
+    name         = "Bella"
+    color        = "Brown"
+    age          = 7
+    food         = ["Fish", "Chicken", "Turkey"]
+    favorite_pet = true
+  }
+}```
