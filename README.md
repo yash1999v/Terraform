@@ -191,3 +191,6 @@ and state file locking by Dynamo DB
 
 Terraform backend to address these challenge 
 by using backend.tf
+
+Dynamo Db to lock the state file
+
